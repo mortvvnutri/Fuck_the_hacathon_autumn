@@ -13,27 +13,56 @@ body {
 
 /* Header */
 .header {
-    display: flex;
-    flex-direction: column; /* Размещаем элементы вертикально */
-    align-items: center;
     padding: 10px 20px;
     background-color: #FF6A00;
     color: #fff;
-    gap: 10px; /* Расстояние между элементами */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.header .logo {
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.logo {
     font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 10px; /* Добавляем отступ под логотипом */
 }
 
+.user-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.user-action-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.user-action-item img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Selection Panel */
 .selection-panel {
     display: flex;
     gap: 10px;
     background-color: white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 25px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1100px; /* Фиксированная максимальная ширина, как на макете */
+    width: 100%; /* Позволяем панели занимать всю ширину до max-width */
+    margin-top: 10px;
+    justify-content: center;
 }
 
 .selection-panel .input-group {
@@ -43,29 +72,84 @@ body {
 }
 
 .selection-panel label {
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: #FF6A00;
+    font-weight: bold;
     margin-bottom: 2px;
 }
 
-.selection-panel input,
-.selection-panel select,
-.selection-panel button {
-    padding: 8px;
+.selection-panel input[type="text"],
+.selection-panel input[type="date"],
+.selection-panel select {
+    padding: 8px 12px;
     font-size: 1em;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.return-button,
+.search-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.return-button {
+    background-color: #FF6A00;
+    color: #fff;
 }
 
 .search-button {
     background-color: #592A9D;
     color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-    padding: 10px 20px;
     font-weight: bold;
-} 
+}
+
+/* Адаптивность для панели выбора */
+@media (max-width: 1200px) {
+    .selection-panel {
+        max-width: 1000px; /* Немного сужаем панель */
+    }
+}
+
+/* Адаптивность для экрана от 768px до 1024px */
+@media (max-width: 1024px) {
+    .selection-panel {
+        flex-wrap: wrap; /* Перестраиваем элементы в две строки */
+        max-width: 90%; /* Сужаем ширину, чтобы не занимала весь экран */
+    }
+
+    .selection-panel .input-group,
+    .selection-panel .return-button,
+    .selection-panel .search-button,
+    .selection-panel select {
+        flex: 1 1 calc(50% - 10px); /* Два элемента в ряд */
+    }
+}
+
+/* Адаптивность для экрана менее 768px */
+@media (max-width: 768px) {
+    .selection-panel {
+        flex-direction: column; /* Все элементы идут в столбик */
+        align-items: center;
+        max-width: 100%; /* Панель занимает всю ширину экрана */
+    }
+
+    .selection-panel .input-group,
+    .selection-panel .return-button,
+    .selection-panel .search-button,
+    .selection-panel select {
+        flex: 1 1 100%;
+        max-width: 100%; /* Элементы занимают всю ширину */
+    }
+
+    .search-button {
+        width: 100%; /* Кнопка на всю ширину */
+    }
+}
 
 .user-actions {
     display: flex;
