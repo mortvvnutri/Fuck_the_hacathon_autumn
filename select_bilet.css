@@ -50,6 +50,58 @@ body {
     width: 20px;
     height: 20px;
 }
+/* Стили для Small Input в Selection Panel */
+.selection-panel .input-group.small-input select {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 15px; /* Закругленные углы, как у других полей */
+    background-color: #f0f0f0; /* Светло-серый фон для гармонии с другими элементами */
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1); /* Внутренняя тень */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.selection-panel .input-group.small-input select:focus {
+    background-color: #e6e6e6; /* Фон при фокусе */
+    outline: none;
+}
+
+.selection-panel .input-group.small-input label {
+    font-size: 0.75em;
+    color: #FF6A00;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Общие стили для input-group в Selection Panel */
+.selection-panel .input-group input[type="text"],
+.selection-panel .input-group input[type="date"],
+.selection-panel .input-group select {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 15px; /* Закругленные края */
+    background-color: #f0f0f0; /* Светло-серый фон для гармонии */
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1); /* Внутренняя тень для объема */
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Плавный переход при наведении */
+}
+
+.selection-panel .input-group input[type="text"]:focus,
+.selection-panel .input-group input[type="date"]:focus,
+.selection-panel .input-group select:focus {
+    background-color: #e6e6e6; /* Темнее при фокусе */
+    outline: none; /* Убираем стандартное выделение */
+}
+
+.selection-panel .input-group label {
+    font-size: 0.75em;
+    color: #FF6A00;
+    font-weight: bold;
+    margin-bottom: 5px; /* Отступ между лейблом и полем */
+}
+
 
 /* Selection Panel */
 .selection-panel {
