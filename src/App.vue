@@ -6,15 +6,15 @@
         <div class="logo">Лого</div>
         <div class="user-actions">
           <span class="user-action-item">
-            <img src="@/assets/icons/profile.png" alt="Профиль" />
+            <img src="@/assets/icons/profile.png" alt="Профиль">
             Профиль
           </span>
           <span class="user-action-item">
-            <img src="@/assets/icons/support.png" alt="Поддержка" />
+            <img src="@/assets/icons/support.png" alt="Поддержка">
             Поддержка
           </span>
           <span class="user-action-item">
-            <img src="@/assets/icons/rub.png" alt="RUB" />
+            <img src="@/assets/icons/rub.png" alt="RUB">
             RUB
           </span>
         </div>
@@ -24,15 +24,15 @@
       <nav class="selection-panel">
         <div class="input-group">
           <label>Откуда</label>
-          <input type="text" placeholder="Ростов-на-Дону" />
+          <input type="text" placeholder="Ростов-на-Дону">
         </div>
         <div class="input-group">
           <label>Куда</label>
-          <input type="text" placeholder="Москва" />
+          <input type="text" placeholder="Москва">
         </div>
         <div class="input-group">
           <label>Дата</label>
-          <input type="date" value="2024-10-26" />
+          <input type="date" value="2024-10-26">
         </div>
         <button class="return-button">Обратно</button>
 
@@ -75,43 +75,35 @@
           <div class="form-row">
             <div class="input-group">
               <label>Фамилия <span class="required">*</span></label>
-              <input type="text" placeholder="Иванов" required />
+              <input type="text" placeholder="Иванов" required>
             </div>
             <div class="input-group">
               <label>Имя <span class="required">*</span></label>
-              <input type="text" placeholder="Иван" required />
+              <input type="text" placeholder="Иван" required>
             </div>
             <div class="input-group">
               <label>Отчество</label>
-              <input type="text" placeholder="Иванович" />
-            </div>
-            <div class="input-group">
-              <label>Дата рождения <span class="required">*</span></label>
-              <input type="date" required />
+              <input type="text" placeholder="Иванович">
             </div>
           </div>
         </section>
 
-        <!-- Document Section -->
-        <section class="form-section">
-          <h2>Документы</h2>
-          <div class="form-row">
-            <div class="input-group">
-              <label>Гражданство <span class="required">*</span></label>
-              <input type="text" placeholder="Россия" required />
+        <!-- Ticket Information -->
+        <section class="ticket-section">
+          <h2>Билеты</h2>
+          <div class="ticket-row">
+            <div class="ticket-group">
+              <label>Номер поезда <span class="required">*</span></label>
+              <input type="text" placeholder="Введите номер поезда" required>
             </div>
-            <div class="input-group">
-              <label>Тип документа <span class="required">*</span></label>
-              <input type="text" placeholder="Паспорт РФ" required />
+            <div class="ticket-group">
+              <label>Вагон <span class="required">*</span></label>
+              <input type="text" placeholder="Введите номер вагона" required>
             </div>
-            <div class="input-group">
-              <label>Номер документа <span class="required">*</span></label>
-              <input type="text" placeholder="Серия и номер паспорта РФ" required />
+            <div class="ticket-group">
+              <label>Места <span class="required">*</span></label>
+              <input type="text" placeholder="Введите номера мест">
             </div>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" id="agreement" required />
-            <label for="agreement">Согласие на обработку персональных данных</label>
           </div>
         </section>
 
@@ -120,35 +112,13 @@
           <h2>Оплата</h2>
           <div class="form-row">
             <div class="input-group">
-              <label>Способ оплаты</label>
-              <select>
-                <option>Банковская карта</option>
-              </select>
-            </div>
-            <div class="input-group">
-              <label>Номер карты <span class="required">*</span></label>
-              <input type="tel" placeholder="0000 0000 0000 0000" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" />
-            </div>
-            <div class="input-group">
-              <label>Срок действия <span class="required">*</span></label>
-              <input type="tel" placeholder="ММ/ГГ" pattern="\d{2}/\d{2}" />
-            </div>
-            <div class="input-group">
-              <label>CVC <span class="required">*</span></label>
-              <input type="tel" placeholder="CVC" maxlength="3" pattern="\d{3}" />
-            </div>
-            <div class="input-group">
               <label>Телефон <span class="required">*</span></label>
-              <input type="tel" placeholder="+7 (900) 456 32-18" required />
+              <input type="tel" placeholder="+7 (900) 456 32-18" required>
             </div>
             <div class="input-group">
               <label>E-mail <span class="required">*</span></label>
-              <input type="email" placeholder="example@mail.ru" required />
+              <input type="email" placeholder="example@mail.ru" required>
             </div>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" id="autopay" />
-            <label for="autopay">Соглашаюсь на автоплатежи</label>
           </div>
           <button type="submit" class="submit-button">Оплатить</button>
         </section>
